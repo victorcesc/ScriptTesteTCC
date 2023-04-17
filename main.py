@@ -15,7 +15,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Leitura do arquivo CSV
-data = pd.read_csv('test.csv')
+data = pd.read_csv('output.csv')
 #LoRaNetworkTest.networkServer.eth[0].mac
 linhas_server_mac = data[data['module'].str.contains('LoRaNetworkTest\.networkServer\.eth\[0\]\.mac') & data['value'].notna()]
 simulated_time = linhas_server_mac[(linhas_server_mac['name'] == 'simulated time') & (linhas_server_mac['value'].notna())]
@@ -79,20 +79,18 @@ ax2.set_ylabel('W',fontsize=8)
 
 sent_packets_values = linhas_sent_packets['value'].tolist()
 packets_received = linhas_packets_received['value'].tolist()
-print(sent_packets_values)
-print(packets_received)
 total_packets = 0
 
 for element in sent_packets_values:
-    print(element)
     total_packets += int(element)
 
+print("Total de pacotes enviados pelos nodos : ", total_packets)
+print("Total de pacotes recebidos pelos servidor : ", packets_received[0])
 total_received_packets = int(packets_received[0])/total_packets
 loss_packets = total_packets - int(packets_received[0]) 
 packet_error_rate = (loss_packets/total_packets)*100
-print("total received packets", total_received_packets, "%")
-print("loss packets", loss_packets)
-print("packet error rate", packet_error_rate, "%")
+
+print("Taxa de erros de pacote : ", packet_error_rate, "%")
 
 ax3.bar('Taxa de erros de pacote', packet_error_rate)
 ax3.set_ylabel('%')
