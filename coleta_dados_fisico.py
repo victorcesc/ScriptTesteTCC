@@ -1,5 +1,6 @@
 import json
 import datetime
+import matplotlib.pyplot as plt
 
 # 14:35 do dia 5 de maio no fuso UTC + 3
 start_time = datetime.datetime(2023, 5, 4, 14, 35, 0)
@@ -33,6 +34,9 @@ is_first = 0
 start_counter = 0
 end_counter = 0
 packets_received = 0
+snr = []
+rssi = []
+timestamps = []
 for obj in data:
     timestamp = obj['rx_timestamp']
     timestamp_without_microseconds = timestamp.split('.')[0] + 'Z'
@@ -43,8 +47,11 @@ for obj in data:
     if start_time <= formatted_timestamp <= end_time:
         #counter
         packets_received += 1
-        print(obj)
-        print(packets_received)
+        # print(obj['snr'])
+        snr.append(obj['snr'])
+        rssi.append(obj['rssi'])
+        timestamps.append((formatted_timestamp - start_time).total_seconds()/60)
+        # print(packets_received)
         if is_first == 0:
             # print(obj)
             start_counter = obj['counter']
@@ -60,9 +67,27 @@ packet_error_rate = (loss_packets/total_packets)*100
 print("total packets ", total_packets)
 print("packets received", packets_received)
 print("loss packets", loss_packets)
+print(rssi)
 
 print("Taxa de erros de pacote : ", packet_error_rate, "%")
 
+print(start_time)
+print(end_time)
+
+print(timestamps)
+
+fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(10, 8))
+
+ax1.plot(timestamps,snr, label = 'SNR')
+ax2.plot(timestamps,rssi, label = 'RSSI')
+ax1.set_xlabel('Tempo(min)')
+ax1.set_ylabel('Valor')
+ax2.set_xlabel('Tempo(min)')
+ax2.set_ylabel('Valor')
+ax3.set_ylim(packet_error_rate - 0.500 , packet_error_rate + 0.500)
+ax3.bar('Taxa de erros de pacote',packet_error_rate)
+plt.legend()
+plt.show()
             
    # print(obj['rx_timestamp'])
         # print(type(obj[1]))

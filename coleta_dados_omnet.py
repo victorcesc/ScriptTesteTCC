@@ -92,6 +92,7 @@ packet_error_rate = (loss_packets/total_packets)*100
 
 print("Taxa de erros de pacote : ", packet_error_rate, "%")
 
+ax3.set_ylim(packet_error_rate - 0.500 , packet_error_rate + 0.500)
 ax3.bar('Taxa de erros de pacote', packet_error_rate)
 ax3.set_ylabel('%')
 
