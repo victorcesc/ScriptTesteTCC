@@ -1,0 +1,12 @@
+{"snr":-7,"rssi":-107,"sf":7,"dev":"teste001","counter":2308,"f_cnt":2307,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:27:12.805182957Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-6.8,"rssi":-105,"sf":7,"dev":"teste001","counter":2310,"f_cnt":2309,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:28:26.093206654Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-6.8,"rssi":-105,"sf":7,"dev":"teste001","counter":2313,"f_cnt":2312,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:30:16.084431291Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-7,"rssi":-106,"sf":7,"dev":"teste001","counter":2314,"f_cnt":2313,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:30:52.673330130Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-6.2,"rssi":-102,"sf":7,"dev":"teste001","counter":2317,"f_cnt":2316,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:32:42.592014497Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-5.8,"rssi":-105,"sf":7,"dev":"teste001","counter":2318,"f_cnt":2317,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:33:19.243245331Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-7.5,"rssi":-106,"sf":7,"dev":"teste001","counter":2319,"f_cnt":2318,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:33:55.879235352Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-5.5,"rssi":-107,"sf":7,"dev":"teste001","counter":2320,"f_cnt":2319,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:34:32.534384113Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-5.2,"rssi":-103,"sf":7,"dev":"teste001","counter":2321,"f_cnt":2320,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:35:09.179073883Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-4.8,"rssi":-106,"sf":7,"dev":"teste001","counter":2322,"f_cnt":2321,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:35:45.814427858Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-6.5,"rssi":-108,"sf":7,"dev":"teste001","counter":2323,"f_cnt":2322,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:36:22.457015026Z","coding_rate":"4/5","bandwidth":125000}
+{"snr":-9,"rssi":-102,"sf":7,"dev":"teste001","counter":2324,"f_cnt":2323,"airtime":"0.056576s","rx_timestamp":"2023-05-05T14:36:59.096459726Z","coding_rate":"4/5","bandwidth":125000}
